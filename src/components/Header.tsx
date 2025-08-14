@@ -30,7 +30,7 @@ export default function Header() {
             <li><Link href="#areas" className="hover:text-blue-600 dark:hover:text-blue-400">Áreas de atuação</Link></li>
             <li><Link href="#diferenciais" className="hover:text-blue-600 dark:hover:text-blue-400">Diferenciais</Link></li>
             <li><Link href="#depoimentos" className="hover:text-blue-600 dark:hover:text-blue-400">Depoimentos</Link></li>
-            <li><Link href="#quem-somos" className="hover:text-blue-600 dark:hover:text-blue-400">Quem somos</Link></li>
+            <li><Link href="#sobre" className="hover:text-blue-600 dark:hover:text-blue-400">Quem somos</Link></li>
           </ul>
           
           <ThemeToggleButton />

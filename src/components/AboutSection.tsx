@@ -3,8 +3,7 @@ import { Scale, MessageCircle, UserCheck } from 'lucide-react'; // Ícones para 
 
 const AboutSection = () => {
   return (
-    // Fundo que se adapta ao tema light/dark
-    <div className="bg-gray-50 dark:bg-gray-900">
+    <div id="sobre" className="bg-gray-50 dark:bg-gray-900">
       <section className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2">
           <div className="lg:pr-8 lg:pt-4">

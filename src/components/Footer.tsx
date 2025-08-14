@@ -38,11 +38,10 @@ export default function Footer() {
               Menu
             </h3>
             <ul className="space-y-2">
-              <li><Link href="/areas-de-atuacao" className="hover:text-blue-600 dark:hover:text-gray-400">Áreas de Atuação</Link></li>
-              <li><Link href="/diferenciais" className="hover:text-blue-600 dark:hover:text-gray-400">Diferenciais</Link></li>
-              <li><Link href="/depoimentos" className="hover:text-blue-600 dark:hover:text-gray-400">Depoimentos</Link></li>
-              <li><Link href="/quem-somos" className="hover:text-blue-600 dark:hover:text-gray-400">Quem Somos</Link></li>
-              <li><Link href="/contato" className="hover:text-blue-600 dark:hover:text-gray-400">Contato</Link></li>
+              <li><Link href="#areas" className="hover:text-blue-600 dark:hover:text-gray-400">Áreas de Atuação</Link></li>
+              <li><Link href="#diferenciais" className="hover:text-blue-600 dark:hover:text-gray-400">Diferenciais</Link></li>
+              <li><Link href="#depoimentos" className="hover:text-blue-600 dark:hover:text-gray-400">Depoimentos</Link></li>
+              <li><Link href="#sobre" className="hover:text-blue-600 dark:hover:text-gray-400">Quem Somos</Link></li>
             </ul>
           </div>
           <div className="flex flex-col items-start md:items-end text-gray-600 dark:text-gray-300">
