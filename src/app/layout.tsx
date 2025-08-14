@@ -1,12 +1,18 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Roboto_Slab } from 'next/font/google'; 
 import './globals.css';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
-const inter = Inter({ subsets: ['latin'] });
+const robotoSlab = Roboto_Slab({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-roboto-slab',
+});
 
 export const metadata: Metadata = {
   title: 'RC Advocacia',
-  description: 'Landing page para serviços de advocacia sob responsabilidade de RC Advocacia.',
+  description: 'Landing page do escritório de advocacia do Ruan Carlos',
 };
 
 export default function RootLayout({
@@ -14,22 +20,12 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const script = `
-    (function() {
-      const theme = localStorage.getItem('theme');
-      if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        document.documentElement.classList.add('dark');
-      } else {
-        document.documentElement.classList.remove('dark');
-      }
-    })();
-  `;
-
   return (
-    <html lang="pt-br">
-      <body className={inter.className}>
-        <script dangerouslySetInnerHTML={{ __html: script }} />
-        {children}
+    <html lang="pt-br" className={robotoSlab.variable}>
+      <body>
+        <Header />
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
