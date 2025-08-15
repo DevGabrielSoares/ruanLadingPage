@@ -16,11 +16,11 @@ const navLinks = [
 
 const mobileMenuVariants: Variants = {
   hidden: { x: "100%" },
-  visible: { 
+  visible: {
     x: 0,
     transition: { ease: [0.22, 1, 0.36, 1], duration: 0.5 }
   },
-  exit: { 
+  exit: {
     x: "100%",
     transition: { ease: [0.6, 0.05, -0.01, 0.9], duration: 0.4 }
   }
@@ -56,13 +56,13 @@ export default function Header() {
   };
 
   const NavLink = ({ href, label, onClick }: { href: string; label: string; onClick?: () => void; }) => (
-    <Link 
-      href={href} 
+    <Link
+      href={href}
       onClick={onClick}
-      className="relative text-lg font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+      className="relative text-lg font-medium text-gray-800 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
     >
       {label}
-      <motion.span 
+      <motion.span
         className="absolute bottom-[-4px] left-0 h-[2px] w-full bg-blue-600 dark:bg-blue-400"
         initial={{ scaleX: 0 }}
         whileHover={{ scaleX: 1 }}
@@ -74,10 +74,10 @@ export default function Header() {
 
   return (
     <>
-      <motion.header 
+      <motion.header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          hasScrolled 
-            ? 'bg-white/90 shadow-md dark:bg-gray-900/90 backdrop-blur-sm' 
+          hasScrolled
+            ? 'bg-white/90 shadow-md dark:bg-gray-900/90 backdrop-blur-sm'
             : 'bg-white dark:bg-gray-900'
         }`}
         initial={{ y: -100 }}
@@ -104,14 +104,16 @@ export default function Header() {
           </div>
 
           <div className="md:hidden flex items-center">
-            <button onClick={toggleMenu} aria-label="Abrir menu"><Menu size={28} /></button>
+            <button onClick={toggleMenu} aria-label="Abrir menu" className="text-gray-800 dark:text-white">
+              <Menu size={28} />
+            </button>
           </div>
         </nav>
       </motion.header>
 
       <AnimatePresence>
         {isMenuOpen && (
-          <motion.div 
+          <motion.div
             className="fixed inset-0 z-50 bg-white dark:bg-gray-900 md:hidden"
             variants={mobileMenuVariants}
             initial="hidden"
@@ -125,7 +127,7 @@ export default function Header() {
                 </button>
               </div>
               
-              <motion.ul 
+              <motion.ul
                 className="flex flex-col items-center justify-center space-y-8 mt-16"
                 variants={mobileLinkContainerVariants}
                 initial="hidden"

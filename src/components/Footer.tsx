@@ -32,9 +32,9 @@ export default function Footer() {
       viewport={{ once: true, amount: 0.2 }}
     >
       <div className="container mx-auto px-6">
-        <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           
-          <motion.div className="flex flex-col items-start mb-4" variants={columnVariants}>
+          <motion.div className="flex flex-col items-start text-left" variants={columnVariants}>
             <div className="flex items-center mb-4">
               <Image src="/lightLogo3.png" alt="Ruan Carlos Advocacia Logo" width={100} height={100} className="mr-4 block dark:hidden"/>
               <Image src="/darkLogo.png" alt="Ruan Carlos Advocacia Logo" width={100} height={100} className="mr-4 hidden dark:block"/>
@@ -47,7 +47,7 @@ export default function Footer() {
             </p>
           </motion.div>
           
-          <motion.div className="flex flex-col md:items-center" variants={columnVariants}>
+          <motion.div className="flex flex-col items-center text-center" variants={columnVariants}>
             <h3 className="font-bold text-lg mb-4 text-gray-900 dark:text-white">Menu</h3>
             <ul className="space-y-2">
               <li><Link href="#areas" className="hover:text-blue-600 dark:hover:text-gray-400">Áreas de Atuação</Link></li>
@@ -57,9 +57,9 @@ export default function Footer() {
             </ul>
           </motion.div>
           
-          <motion.div className="flex flex-col items-start md:items-end text-gray-600 dark:text-gray-300" variants={columnVariants}>
+          <motion.div className="flex flex-col items-start md:items-end text-left md:text-right text-gray-600 dark:text-gray-300" variants={columnVariants}>
             <h3 className="font-bold text-lg mb-4 text-gray-900 dark:text-white">Contato</h3>
-            <p className="text-sm text-right md:text-right">Av. Paulino Félix, 932<br/>Acopiara - CE, 63560-000</p>
+            <p className="text-sm">Av. Paulino Félix, 932<br/>Acopiara - CE, 63560-000</p>
             <p className="text-sm mt-2">(88) 99809-0096</p>
             <p className="text-sm">adv.rcarlos@gmail.com</p>
             <p className="text-sm font-bold text-gray-900 dark:text-white mt-4">Horário: Seg-Sex: 8h às 17h</p>

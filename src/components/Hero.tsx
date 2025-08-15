@@ -3,8 +3,8 @@ import CTAButton from './CTAButton';
 export default function Hero() {
   return (
       <section 
-        className="relative bg-cover bg-[center_32%] text-white py-20 md:py-32 bg-[url('/hero5.jpeg')]" 
-        style={{ backgroundImage: "url('/hero5.jpeg')" }}
+        className="relative bg-cover bg-[center_34%] text-white py-20 md:py-32 bg-[url('/hero3.jpg')]" 
+        style={{ backgroundImage: "url('/hero3.jpg')" }}
       >
       {/* Overlay escuro para legibilidade do texto */}
       <div className="absolute inset-0 bg-black opacity-60"></div>

@@ -88,7 +88,7 @@ export default function AboutSection(){
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           >
             <Image
-              src="/lawyer-image.jpg"
+              src="/lawyer2.jpg"
               alt="Foto do Dr. Ruan Carlos"
               className="absolute inset-0 h-full w-full rounded-2xl bg-slate-50 object-cover shadow-lg"
               fill
