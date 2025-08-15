@@ -2,9 +2,8 @@
 
 import Image from 'next/image';
 import { Scale, MessageCircle, UserCheck } from 'lucide-react';
-import { motion, Variants } from 'framer-motion'; // Importe 'Variants' aqui
+import { motion, Variants } from 'framer-motion';
 
-// Adicione o tipo 'Variants' aqui
 const listContainerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
@@ -15,7 +14,6 @@ const listContainerVariants: Variants = {
   },
 };
 
-// E adicione o tipo 'Variants' aqui também
 const listItemVariants: Variants = {
   hidden: { opacity: 0, x: -20 },
   visible: { 
@@ -23,7 +21,7 @@ const listItemVariants: Variants = {
     x: 0,
     transition: {
       duration: 0.5,
-      ease: "easeOut"
+      // A linha 'ease: "easeOut"' foi removida daqui
     }
   },
 };
