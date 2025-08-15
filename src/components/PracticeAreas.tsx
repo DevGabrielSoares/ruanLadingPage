@@ -2,42 +2,18 @@
 
 import { Gavel, Landmark, Users, Scale, HeartHandshake, ShieldCheck } from 'lucide-react';
 import CTAButton from './CTAButton';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 
 const areas = [
-  {
-    icon: <Gavel size={32} />,
-    title: 'Direito Criminal',
-    description: 'Defesa completa em processos criminais para proteger os direitos dos clientes.',
-  },
-  {
-    icon: <Landmark size={32} />,
-    title: 'Direito Civil',
-    description: 'Consultoria e solução de conflitos em contratos e disputas familiares.',
-  },
-  {
-    icon: <ShieldCheck size={32} />,
-    title: 'Direito do Consumidor',
-    description: 'Defesa dos direitos do consumidor em questões de produtos, serviços e práticas comerciais.',
-  },
-  {
-    icon: <Scale size={32} />,
-    title: 'Direito do Trabalho',
-    description: 'Representação em disputas trabalhistas e prevenção de conflitos.',
-  },
-  {
-    icon: <Users size={32} />,
-    title: 'Direito de Família e Sucessões',
-    description: 'Assistência em divórcios, guarda de filhos e sucessões.',
-  },
-  {
-    icon: <HeartHandshake size={32} />,
-    title: 'Direito Previdenciário',
-    description: 'Assessoria para concessão de aposentadorias, pensões e benefícios junto ao INSS.',
-  },
+  { icon: <Gavel size={32} />, title: 'Direito Criminal', description: 'Defesa completa em processos criminais para proteger os direitos dos clientes.'},
+  { icon: <Landmark size={32} />, title: 'Direito Civil', description: 'Consultoria e solução de conflitos em contratos e disputas familiares.'},
+  { icon: <ShieldCheck size={32} />, title: 'Direito do Consumidor', description: 'Defesa dos direitos do consumidor em questões de produtos, serviços e práticas comerciais.'},
+  { icon: <Scale size={32} />, title: 'Direito do Trabalho', description: 'Representação em disputas trabalhistas e prevenção de conflitos.'},
+  { icon: <Users size={32} />, title: 'Direito de Família e Sucessões', description: 'Assistência em divórcios, guarda de filhos e sucessões.'},
+  { icon: <HeartHandshake size={32} />, title: 'Direito Previdenciário', description: 'Assessoria para concessão de aposentadorias, pensões e benefícios junto ao INSS.'},
 ];
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -47,14 +23,14 @@ const containerVariants = {
   },
 };
 
-const cardVariants = {
+const cardVariants: Variants = {
   hidden: { opacity: 0, y: 50 },
   visible: { 
     opacity: 1, 
     y: 0,
     transition: {
       duration: 0.6,
-      ease: "easeOut"
+      // A linha 'ease: "easeOut"' foi REMOVIDA daqui para corrigir o erro
     }
   },
 };
