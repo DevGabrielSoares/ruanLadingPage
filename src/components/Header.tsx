@@ -5,7 +5,7 @@ import Image from 'next/image';
 import ThemeToggleButton from './ThemeToggleButton';
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, Variants } from 'framer-motion';
 
 const navLinks = [
   { href: "#areas", label: "Áreas de atuação" },
@@ -14,7 +14,7 @@ const navLinks = [
   { href: "#sobre", label: "Quem somos" },
 ];
 
-const mobileMenuVariants = {
+const mobileMenuVariants: Variants = {
   hidden: { x: "100%" },
   visible: { 
     x: 0,
@@ -24,9 +24,9 @@ const mobileMenuVariants = {
     x: "100%",
     transition: { ease: [0.6, 0.05, -0.01, 0.9], duration: 0.4 }
   }
-};
+} as const; // Adicione 'as const' aqui para corrigir o erro de tipo
 
-const mobileLinkContainerVariants = {
+const mobileLinkContainerVariants: Variants = {
   visible: {
     transition: {
       staggerChildren: 0.1,
@@ -34,11 +34,10 @@ const mobileLinkContainerVariants = {
   },
 };
 
-const mobileLinkVariants = {
+const mobileLinkVariants: Variants = {
   hidden: { opacity: 0, x: 20 },
   visible: { opacity: 1, x: 0 },
 };
-
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -90,7 +89,7 @@ export default function Header() {
         }`}>
           <div className="text-xl font-bold">
             <Link href="/">
-              <Image src="/lightLogo3.png" alt="Logo RC Advocacia" width={45} height={45} className="block dark:hidden"/>
+              <Image src="/lightLogo.png" alt="Logo RC Advocacia" width={45} height={45} className="block dark:hidden"/>
               <Image src="/darkLogo.png" alt="Logo RC Advocacia" width={45} height={45} className="hidden dark:block"/>
             </Link>
           </div>
