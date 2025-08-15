@@ -2,9 +2,10 @@
 
 import Image from 'next/image';
 import { Scale, MessageCircle, UserCheck } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion'; // Importe 'Variants' aqui
 
-const listContainerVariants = {
+// Adicione o tipo 'Variants' aqui
+const listContainerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -14,7 +15,8 @@ const listContainerVariants = {
   },
 };
 
-const listItemVariants = {
+// E adicione o tipo 'Variants' aqui também
+const listItemVariants: Variants = {
   hidden: { opacity: 0, x: -20 },
   visible: { 
     opacity: 1, 
@@ -85,7 +87,7 @@ export default function AboutSection(){
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }} // A more refined easing for the image
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           >
             <Image
               src="/lawyer-image.jpg"
