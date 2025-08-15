@@ -4,7 +4,8 @@ import { useState, useEffect } from 'react';
 import { Sun, Moon } from 'lucide-react';
 
 export default function ThemeToggleButton() {
-  const [theme, setTheme] = useState(null);
+  // A correção está aqui: <string | null>
+  const [theme, setTheme] = useState<string | null>(null);
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme') || 'light';
