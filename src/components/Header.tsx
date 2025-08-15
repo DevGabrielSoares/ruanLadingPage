@@ -24,7 +24,7 @@ const mobileMenuVariants: Variants = {
     x: "100%",
     transition: { ease: [0.6, 0.05, -0.01, 0.9], duration: 0.4 }
   }
-} as const; // Adicione 'as const' aqui para corrigir o erro de tipo
+} as const;
 
 const mobileLinkContainerVariants: Variants = {
   visible: {
@@ -89,7 +89,7 @@ export default function Header() {
         }`}>
           <div className="text-xl font-bold">
             <Link href="/">
-              <Image src="/lightLogo.png" alt="Logo RC Advocacia" width={45} height={45} className="block dark:hidden"/>
+              <Image src="/lightLogo3.png" alt="Logo RC Advocacia" width={45} height={45} className="block dark:hidden"/>
               <Image src="/darkLogo.png" alt="Logo RC Advocacia" width={45} height={45} className="hidden dark:block"/>
             </Link>
           </div>
